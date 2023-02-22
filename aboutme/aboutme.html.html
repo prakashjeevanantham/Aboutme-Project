@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link href="../css project/aboutme.css" type="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        background-color: rgb(176, 38, 38);
+      }
+      .navbar ul {
+        background: url(../aboutme/images/mass-effect-dark-background-5k-5120x2880-8150.jpg);
+        background-position: center;
+        background-size: cover;
+        opacity: 0.5px;
+        transition: 0.7s;
+      }
+      .nav-link {
+        background-color: rgb(0, 0, 0, 0.6);
+      }
+      .info {
+        background: url(../aboutme/images/mass-effect-dark-background-5k-5120x2880-8150.jpg);
+        background-position: right;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        min-height: 50vh;
+      }
+      .navbar-nav .nav-item:hover {
+        background-color: transparent;
+        background-color: rgb(102, 102, 102,0.5);
+        border-radius: 4px;
+      }
+      .navbar-toggler {
+        background-color: transparent;
+      }
+      .navbar-toggler-icon {
+        background-color: rgb(230, 231, 232);
+        border-radius: 4px;
+      }
+      .nav-item i{
+        margin: 6px;
+      }
+      .social-media {
+        display: flex;
+      }
+      .social-media .image {
+        margin: 10px;
+        font-size: 20px;
+     
+      }
+      .social-media .image a{
+        color: white;
+      }
+      .btn-group{
+       margin:30px 20%;
+      }
+      .btn-group button i{
+        margin: 4px;
+      }
+      .btn-group button {
+        background-color: rgb(186, 186, 186);
+        margin: 3px;
+      }
+
+
+      .btn-group button:hover{
+        background-color: green;
+        border-radius: 5px;
+      }
+      .my-services{
+        opacity: 20px;
+        background-color: rgb(49, 48, 48);
+      }
+      .card-group{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: capitalize;
+      }
+      .ipl{
+        min-width: 400px;
+        position: relative;   
+      }
+      .card-group .ipl::before{
+        content: '\f13d';
+        width: 50px;
+        display: inline-block;
+        height: 50px;
+        position: absolute;
+        background-color: rgb(251, 254, 254);
+        font-family: "Fontawesome";
+        font-size: 20px;
+        cursor: pointer;
+        color: rgb(44, 135, 2);
+      }
+      .portfolio{
+        text-transform: capitalize;
+       background-color: gainsboro;
+       text-align: center;
+
+      }
+      /* .imagess {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+      }
+      .imagess img{
+        width: 300px;
+        
+      } */
+ .imagess {
+  margin: 0px;
+ }
+.plan{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  position: relative;
+}
+.plan span{
+  position: relative;
+  background-color: green;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  left: 3%;
+  border: 2px solid white;
+ 
+}
+.color{
+  background-color: gray;
+  
+}
+
+/* .plan span{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 30px;
+  left: 40%;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: green;
+  cursor: pointer;
+  z-index: -1;
+} */
+/* .plan-group span{
+  position: relative;
+  z-index: 10;
+} */
+.together{
+  text-transform: capitalize;
+  background: url(../aboutme/images/ocean-3605547__480.jpg);
+  min-height: 30vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.together .btn{
+ margin: 10px;
+ text-align: center;
+ text-transform: capitalize;
+}
+.success-story{
+  text-transform: capitalize;
+  text-align: center;
+  background-color: rgb(0, 0, 0,.5);
+}
+.icons{
+  background-color: rgb(136, 136, 136,0.5);
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+.icons .reward{
+  margin: 10px;
+}
+.icons .reward i{
+  color: rgb(246, 251, 251);
+  font-size: 25px;
+  border-radius: 50%;
+  border: 2px solid rgb(242, 242, 242);
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+
+
+}
+.icons .reward p{
+  margin: 0px;
+  padding: 0px;
+}
+.do{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wanna-talk {
+  position: relative;
+  margin: 0;
+}
+
+.wanna-talk form label i{
+  position: absolute;
+  left: 27px;
+  margin-top: 8px;
+  background-color: green;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 3px;
+
+}
+.wanna-talk form input{
+  padding:  10px 50px;
+  text-transform: capitalize;
+  margin: 0px 20px;
+  overflow: hidden;
+  width: 90%;
+
+}
+.wanna-talk form{
+  margin: 0;
+}
+
+
+ 
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <!-- container start -->
+    <div class="container-fluid">
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-dark"
+        style="text-transform: capitalize"
+      >
+        <div class="navbar-brand px-4 text-light">
+          <p>about<span>me</span></p>
+        </div>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-target="#menubar"
+          data-bs-toggle="collapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menubar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="" class="nav-link text-light px-4 active"><i class="fa-solid fa-house"></i>home</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-light px-4"><i class="fa-solid fa-user"></i>about</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-light px-4"><i class="fa-solid fa-gears"></i>services</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-light px-4"><i class="fa-brands fa-slack"></i>portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-light px-4"><i class="fa-solid fa-gift"></i>pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-light px-4"><i class="fa-solid fa-blog"></i>blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-light px-4"><i class="fa-solid fa-address-book"></i>contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="info">
+        <p>hi,i'm</p>
+        <h1>from uk</h1>
+        <div class="social-media">
+          <div class="image">
+            <a href="https://www.facebook.com/"> 
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+          </div>
+          <div class="image">
+            <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-square-instagram"></i>
+             </a>
+          </div>
+          <div class="image">
+            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">
+                <i class="fa-brands fa-square-twitter"></i>
+             </a>
+          </div>
+          <div class="image">
+            <a href="https://www.google.com/intl/en-GB/gmail/about/">
+                <i class="fa-solid fa-envelope"></i>
+             </a>
+          </div>
+        </div>
+      </div>
+      <!-- about row start -->
+      <div class="about text-center ">
+        <h1 class="text-center" style="text-transform: capitalize; color: green; padding: 20px;">about me</h1>
+        <div class="about-img ">
+            <img src="../aboutme/images/Elon-Musk-2022.webp " class="img-fluid ">
+        </div>
+        <div class="about-content ">
+            <p>
+            Elon Reeve Musk FRS (/ˈiːlɒn/ EE-lon; born June 28, 1971) is a business magnate and investor. He is the founder, CEO and chief engineer of SpaceX; angel investor, CEO and product architect of Tesla, Inc.; owner and CEO of Twitter, Inc.; founder of The Boring Company; co-founder of Neuralink and OpenAI; and president of the philanthropic Musk Foundation. With an estimated net worth of around $196 billion as of February 15, 2023, primarily from his ownership stakes in Tesla and SpaceX,[4][5] Musk is the second-wealthiest person in the world, according to both the Bloomberg Billionaires Index and Forbes's real-time billionaires list.[6][7]
+
+Musk was born in Pretoria, South Africa.<br>
+
+</p>
+<button type="button" class="btn btn-success">Download resume</button>
+</div>
+        </div>
+      </div>
+      
+    <div class="btn-group "  style="display: flex; justify-content: center;" >
+      <button type="button"class="btn "><i class="fa-brands fa-telegram"></i>experience</button>
+      <button type="button"class="btn"><i class="fa-solid fa-school"></i>education</button>
+      <button type="button"class="btn"><i class="fa-solid fa-award"></i>award</button>
+      <button type="button"class="btn"><i class="fa-solid fa-diamond"></i>skills</button>
+
+    </div>
+    <!-- about row end-->
+    <!-- my services start -->
+    <hr>
+<div class="my-services text-center">
+  <div class="heading">
+    <h1 class="text-light">my<span style="color: green;">services</span></h1>
+    <p  class="text-light">a wonderful serentiy has taken possession of my entire soul,like these sweet mornings of spring which i enjoy with my heart</p>
+  </div>
+  <div class="card-group ">
+    <div class="card ipl m-4">
+      <div class="card-body text-center">
+      <div class="card-title">
+        <h2>app development</h2>
+      </div>
+      <div class="card-text">
+        <p>even the all-powerful has no control about the blind texts it is an almost unthorught aphic life one day however a small line of blind text by the name of loerm ipsum decicded to leave for the far world of grammer</p>
+      </div>
+      <button class="btn btn-success" type="button">read more</button>
+   </div>
+    </div>
+    <div class="card ipl  m-4">
+      <div class="card-body text-center">
+      <div class="card-title">
+        <h2>app development</h2>
+      </div>
+      <div class="card-text">
+        <p>even the all-powerful has no control about the blind texts it is an almost unthorught aphic life one day however a small line of blind text by the name of loerm ipsum decicded to leave for the far world of grammer</p>
+      </div>
+      <button class="btn btn-success" type="button">read more</button>
+   </div>
+    </div>  
+      <div class="card ipl m-4">
+      <div class="card-body text-center">
+      <div class="card-title">
+        <h2>app development</h2>
+      </div>
+      <div class="card-text">
+        <p>even the all-powerful has no control about the blind texts it is an almost unthorught aphic life one day however a small line of blind text by the name of loerm ipsum decicded to leave for the far world of grammer</p>
+      </div>
+      <button class="btn btn-success" type="button">read more</button>
+   </div>
+    </div>
+  
+  <div class="card ipl  m-4">
+    <div class="card-body text-center">
+    <div class="card-title">
+      <h2>app development</h2>
+    </div>
+    <div class="card-text">
+      <p>even the all-powerful has no control about the blind texts it is an almost unthorught aphic life one day however a small line of blind text by the name of loerm ipsum decicded to leave for the far world of grammer</p>
+    </div>
+    <button class="btn btn-success" type="button">read more</button>
+ </div>
+  </div> 
+  <div class="card ipl m-4">
+    <div class="card-body text-center">
+    <div class="card-title">
+      <h2>app development</h2>
+    </div>
+    <div class="card-text">
+      <p>even the all-powerful has no control about the blind texts it is an almost unthorught aphic life one day however a small line of blind text by the name of loerm ipsum decicded to leave for the far world of grammer</p>
+    </div>
+    <button class="btn btn-success" type="button">read more</button>
+ </div>
+  </div> 
+  <div class="card ipl hello m-4">
+    <div class="card-body text-center">
+    <div class="card-title">
+      <h2>app development</h2>
+    </div>
+    <div class="card-text">
+      <p>even the all-powerful has no control about the blind texts it is an almost unthorught aphic life one day however a small line of blind text by the name of loerm ipsum decicded to leave for the far world of grammer</p>
+    </div>
+    <button class="btn btn-success" type="button">read more</button>
+ </div>
+  </div>
+</div> 
+</div>
+</div>
+<div class="my-team text-center my-5">
+  <nav class="team-content">
+  <h1>my <span style="color: green;">team</span></h1>
+  <p  class="text-dark">a wonderful serentiy has taken possession of my entire soul,like these sweet mornings of spring which i enjoy with my heart</p>
+
+</nav>
+<div class="team-profile">
+  <div class="card-group">
+    <div class="card m-2">
+      <div class="">
+        <img src="../aboutme/images/88293744.jpg" class="card-img-top ">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">spiderman</h3>
+        <h4 class="card-subtitle">super hero</h4>
+      </div>
+    </div>
+    <div class="card m-2">
+      <div class="">
+        <img src="../aboutme/images/88293744.jpg" class="card-img-top ">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">spiderman</h3>
+        <h4 class="card-subtitle">super hero</h4>
+      </div>
+    </div>
+    <div class="card m-2 ">
+      <div class="">
+        <img src="../aboutme/images/88293744.jpg" class="card-img-top ">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">spiderman</h3>
+        <h4 class="card-subtitle">super hero</h4>
+      </div>
+    </div>
+    <div class="card m-2">
+      <div class="">
+        <img src="../aboutme/images/88293744.jpg" class="card-img-top ">
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">spiderman</h3>
+        <h4 class="card-subtitle">super hero</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+<div class="portfolio ">
+  <div class="port-content m-3">
+    <h3>portfolio <span style="color: green;font-weight: 900;">gallery</span></h3>
+    <p  class="text-dark">a wonderful serentiy has taken possession of my entire soul,like these sweet mornings of spring which i enjoy with my heart</p>
+    <button class="btn btn-outline-light" type="button">all</button>
+    <button class="btn btn-outline-light" type="button">illustration</button>
+    <button class="btn btn-outline-light" type="button">photography</button>
+    <button class="btn btn-outline-light" type="button">websites</button>
+    <button class="btn btn-outline-light" type="button">art</button>
+
+
+  </div>
+  <div class="imagess row row-cols-sm-4 mb-4 ">
+    <img src="../aboutme/images/index.jpg" class="img-fluid">
+    <img src="../aboutme/images/index.jpg"class="img-fluid">
+    <img src="../aboutme/images/index.jpg"class="img-fluid">
+    <img src="../aboutme/images/index.jpg"class="img-fluid">
+    <img src="../aboutme/images/index.jpg"class="img-fluid">
+    <img src="../aboutme/images/index.jpg"class="img-fluid">
+    <img src="../aboutme/images/index.jpg"class="img-fluid">
+    <img src="../aboutme/images/index.jpg"class="img-fluid">
+
+
+
+  </div>
+
+</div>
+
+<div class="pricing-plan text-center">
+  <div class="pricing-plan-content">
+    <h1>pricing<span style="color: green;">plan</span></h1>
+    <p  class="text-dark">a wonderful serentiy has taken possession of my entire soul,like these sweet mornings of spring which i enjoy with my heart</p>
+
+  </div>
+  <div class="card-group plan text-center m-3">
+    <div class="card  m-2 w-50" >
+      <div class="color">
+      <h2 class="card-title plan-group ">starter</h2>
+      <span>$<sup>19</sup><br>/month</span>
+    </div>
+      <div class="card-body ">
+        <div class="card-text">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">10 gb</li>
+            <li  class="list-group-item">10 emails</li>
+            <li  class="list-group-item">10 domains</li>
+            <li  class="list-group-item">unlimited bandwidth</li>
+            <li  class="list-group-item"><button type="button" class="btn btn-success">choose plan</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card m-2 w-50">
+      <div class="color">
+
+      <h2 class="card-title plan-group">starter</h2>
+      <span>$<sup>19</sup><br>/month</span>
+</div>
+      <div class="card-body">
+        <div class="card-text">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">10 gb</li>
+            <li  class="list-group-item">10 emails</li>
+            <li  class="list-group-item">10 domains</li>
+            <li  class="list-group-item">unlimited bandwidth</li>
+            <li  class="list-group-item"><button type="button" class="btn btn-success">choose plan</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card  m-2 w-50">
+      <div class="color">
+
+      <h2 class="card-title plan-group">starter</h2>
+      <span>$<sup>19</sup><br>/month</span>
+</div>
+      <div class="card-body">
+        <div class="card-text">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">10 gb</li>
+            <li  class="list-group-item">10 emails</li>
+            <li  class="list-group-item">10 domains</li>
+            <li  class="list-group-item">unlimited bandwidth</li>
+            <li  class="list-group-item"><button type="button" class="btn btn-success">choose plan</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="together">
+ <div class="together-content text-light text-center m-4">
+  <h1>let's work togrther</h1>
+  <h3>i am availale for freelance</h3>
+  <button class="btn btn-outline-light">
+    get quotes
+  </button>
+ </div>
+</div>
+<div class="success-story">
+  <div class="success-story-content">
+    <h1>success story</h1>
+  </div>
+    <div class="icons">
+      <div class="reward">
+        <i class="fa-solid fa-mug-hot"></i>
+        <p>34360</p>
+        <h4>cups of coffee</h4>
+      </div>
+      <div class="reward">
+        <i class="fa-solid fa-mug-hot"></i>
+
+        <p>32</p>
+        <h4>awards</h4>
+      </div>
+      <div class="reward">
+        <i class="fa-solid fa-book"></i>
+        <p>218</p>
+        <h4>books</h4>
+      </div>
+      <div class="reward">
+        <i class="fa-solid fa-book"></i>
+
+        <p>94360</p>
+        <h4>fans</h4>
+      </div>
+    </div>
+</div>
+<div class="wanna-talk text-center">
+  <div class="wanna-talk-content">
+    <h1 class="h3 " >wanna talk</h1>
+    <p  class="text-dark">a wonderful serentiy has taken possession of my entire soul,like these sweet mornings of spring which i enjoy with my heart</p>
+  </div>
+  <div class="dot">
+  <div class="write-me m-1" style="background-color: rgb(136, 133, 133,.5);">
+    <p class="h3">write me</p>
+    <form action="" method="get">
+      <div>
+      <label for="yourname"><i class="fa-regular fa-user"></i></label>
+      <input class="form-control" type="text" placeholder="your name" id="yourname" required>
+    </div>
+    <div>
+
+      <label for="email"><i class="fa-solid fa-envelope"></i></label>
+      <input type="email"  id="email" class="form-control" placeholder="your email" required>
+    </div>
+    <div>
+      <label for="phone"><i class="fa-solid fa-phone"></i></label>
+      <input type="tel" class="form-control" id="phone"  placeholder="phone*use only digit with/without+sign" required>
+    </div>
+    <div>
+      <label for="text"></label>
+      <input type="textarea"class="form-control ms-4" style="height: 100px; width: 80%;" id="text" placeholder="write comment here">
+    </div>
+    <div class="d-flex">
+ <button type="submit" class="btn btn-success mx-auto my-5 px-5">send</button>
+ <span style="color: red;">*required fields</span>
+    </div>
+    </form>
+    </div>
+    <div class="get-free m-1 "
+    style="background-color: rgb(136, 133, 133,.5);">
+      <p class="h3 " >get free quote</p>
+      <form method="get">
+        <div>
+          <label for="yourname1"><i class="fa-regular fa-user"></i></label>
+          <input class="form-control" type="text" placeholder="your name" id="yourname1" required>
+        </div>
+        <div>
+    
+          <label for="email1"><i class="fa-solid fa-envelope"></i></label>
+          <input type="email" class="form-control" placeholder="your email" id="email1" equired>
+        </div>
+        <div>
+          <label for="phone1"><i class="fa-solid fa-phone"></i></label>
+          <input type="tel" class="form-control"id="phone1" placeholder="phone*use only digit with/without+sign" required>
+        </div>
+        <div>
+          <label for="location"><i class="fa-solid fa-location-dot"></i></label>
+          <input type="text" class="form-control"  id="location" placeholder="location">
+        </div>
+        <div>
+          <select class="form-control my-4 mx-4 " style="width: 90%;">
+            <option value="" class="action">select to state</option>
+            <option value="tn">tamil nadu</option>
+            <option value="ap">andhra pradash</option>
+            <option value="kn">karnataka</option>
+            <option value="up">uthra pradash</option>
+            <option value="kr">kerala</option>
+
+          </select>
+        </div>
+        <div class="d-flex">
+          <button type="submit" class="btn btn-success mx-auto my-5 px-5">send</button>
+          <span style="color: red;">*required fields</span>
+             </div>
+      </form>
+    </div>
+  </div>
+  </div>
+  <br>
+  <hr>
+  <div class="copyrights bg-dark text-center text-light">
+<h4><i class="fa-regular fa-copyright"></i>2020 all rights reserved</h4>
+  </div>
+    </div>
+    <!-- container end -->
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
